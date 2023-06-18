@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Cálculo de IMC</title>
+</head>
+<body>
+    <div class="container-conteudo">
+        <div class="wrapper-info">
+            <div class="container-info">
+                <h2 class="titulo-info">CALCULE SEU IMC.</h2>
+                <div class="linha"></div>
+                <p class="conteudo-info">Índice de Massa Corporal é um padrão de cálculo da obesidade de um indivíduo.</p>
+                <div class="botao-info">
+                    <button class="botao"><span class="material-symbols-outlined">
+                        arrow_forward_ios
+                        </span></button>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-form">
+            <div class ="container-form">
+                <div class="container-titulo">
+                    <h3 class="form-titulo">Insira seus dados.</h3>
+                    <p class="form-info">Se atente as métricas! Caso contrário, o resultado do cálculo não será preciso.</p>
+                </div>
+                <form action="../script/server/index.php" method="post">
+                        <label class="form-label">Peso: </label>
+                        <span class="form-metrica">em quilos (kg)</span>
+                        <input type="text" name="input__peso" id="input__peso" class="form-input" maxlength="3" oninput="validaNumero(this)" required>
+                        
+                        <label class="form-label">Altura: </label>
+                        <span class="form-metrica">em metros (m)</span>
+                        <input type="text" name="input__altura" id="input__altura" class="form-input" maxlength="4" oninput="validaNumero(this)" required>
+
+                    <div class="container-botao">
+                        <button type="submit" class="botao-submit"><span class="material-symbols-outlined">
+                        send
+                        </span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script/client/format.js"></script>
+</body>
+</html>
